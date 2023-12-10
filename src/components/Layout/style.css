@@ -1,0 +1,39 @@
+.nav-menu button {
+  font-weight: bold;
+}
+
+.nav-link .active:hover,
+.nav-link .active:focus {
+  outline: none;
+}
+
+.nav-link .active:before {
+  content: '';
+  z-index: -1;
+  position: absolute;
+  background-color: #ee8a36;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  max-width: 0;
+  transition: max-width 500ms;
+}
+
+.nav-link .active {
+  position: relative;
+  /* margin: 1em; */
+  /* font-size: 1rem; */
+  /* text-transform: uppercase; */
+  /* letter-spacing: 1px; */
+  z-index: 1;
+  color: black;
+}
+
+.nav-link .active.active:before {
+  max-width: 10rem;
+}
+
+.nav-link .active:hover {
+  color: black;
+}
