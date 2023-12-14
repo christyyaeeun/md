@@ -11,7 +11,7 @@
   content: '';
   z-index: -1;
   position: absolute;
-  background-color: #ee8a36;
+  background-color: #bee3f8;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -34,6 +34,6 @@
   max-width: 10rem;
 }
 
-.nav-link .active:hover {
+/* .nav-link .active:hover {
   color: black;
-}
+} */

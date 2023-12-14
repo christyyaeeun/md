@@ -61,7 +61,7 @@ function Gallery() {
             <Box maxW="1300px" m="0 auto" p="1em 2em" id="gallery-section">
                 <Heading mb={ { base: ".5em" } }>Popular Items</Heading>
                 { !isMobile && (
-                    <HStack spacing={ 4 } mt={ 4 } mb={ 8 }>
+                    <HStack spacing={ 4 } mt={ 4 } mb={ 8 } color='black'>
                         <Button
                             colorScheme={ selectedTag === null ? 'blue' : 'gray' }
                             onClick={ () => handleTagSelection(null) }

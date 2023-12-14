@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { FaArrowUp } from 'react-icons/fa';
 import { AboutComponent, ContactComponent, MenuComponent, GalleryComponent, HeroComponent } from '../components/Landing';
 import Navbar from '../components/Layout/Navbar';
+import { Box } from '@chakra-ui/react';
 
 function Home() {
     const [ showScrollToTop, setShowScrollToTop ] = useState(false);
@@ -44,32 +45,34 @@ function Home() {
 
     return (
         <>
-            <Navbar onScrollToSection={ handleNavClick } />
+            <Box bg='white' color='black'>
+                <Navbar onScrollToSection={ handleNavClick } />
 
-            { showScrollToTop && (
-                <div className="scroll-to-top-btn" onClick={ () => scrollToSection(heroRef) }>
-                    <FaArrowUp />
-                </div>
-            ) }
+                { showScrollToTop && (
+                    <div className="scroll-to-top-btn" onClick={ () => scrollToSection(heroRef) }>
+                        <FaArrowUp />
+                    </div>
+                ) }
 
-            <div ref={ heroRef } className="home-container section" id="home-container" />
-            <HeroComponent menuRef={ menuRef } />
-            <div ref={ aboutRef } className="about-container section" id="about-container" />
-            <AboutComponent />
-            <div ref={ galleryRef } className="gallery-container section" id="gallery-container" />
-            <GalleryComponent />
-            <div ref={ menuRef } className="menu-container section" id="menu-container" />
-            <MenuComponent />
+                <div ref={ heroRef } className="home-container section" id="home-container" />
+                <HeroComponent menuRef={ menuRef } />
+                <div ref={ aboutRef } className="about-container section" id="about-container" />
+                <AboutComponent />
+                <div ref={ galleryRef } className="gallery-container section" id="gallery-container" />
+                <GalleryComponent />
+                <div ref={ menuRef } className="menu-container section" id="menu-container" />
+                <MenuComponent />
 
-            <motion.div
-                transition={ { duration: 1, delay: 0.3 } }
-                initial={ { opacity: 0, y: 50 } }
-                animate={ { y: 0 } }
-                whileInView={ { opacity: 1 } }
-            >
-                <div ref={ contactRef } className="contact-container section" id="contact-container" />
-                <ContactComponent />
-            </motion.div>
+                <motion.div
+                    transition={ { duration: 1, delay: 0.3 } }
+                    initial={ { opacity: 0, y: 50 } }
+                    animate={ { y: 0 } }
+                    whileInView={ { opacity: 1 } }
+                >
+                    <div ref={ contactRef } className="contact-container section" id="contact-container" />
+                    <ContactComponent />
+                </motion.div>
+            </Box>
         </>
     );
 }

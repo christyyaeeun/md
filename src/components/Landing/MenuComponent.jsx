@@ -29,7 +29,7 @@ function Menu() {
             initial={ { opacity: 0 } }
             whileInView={ { opacity: 1 } }
         >
-            <div id="menu-section">
+            <Box id="menu-section" bg='white'>
                 {/* <Flex>
                 <Image
                     rounded={ 'md' }
@@ -479,7 +479,7 @@ function Menu() {
                     </SimpleGrid>
                 </Container>
 
-            </div>
+            </Box>
         </motion.div>
     )
 }

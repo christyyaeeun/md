@@ -8,6 +8,7 @@ import {
     Text,
 } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
+import heroImg from '../../assets/img/about-img.webp'
 
 const Animation = ({ children, delay = 0 }) => (
     <motion.div
@@ -26,18 +27,22 @@ function About() {
             <Box className="about" minHeight="900px" position="relative" bg="white">
                 <Box className="about__background" />
                 <Box
-                    className="about__inner-container layout-flow"
+                    className="about__inner-container"
                     position="relative"
                     zIndex="1"
                     color="white"
                     mt={ { base: '-5em' } }
+                    m="0 auto"
                 >
                     <Container
                         display="flex"
                         justifyContent="center"
                         maxW="1200px"
+                        width="100%"
                         color="#3b3b3b"
                         flexDirection={ { base: 'column', md: 'row', lg: 'row' } }
+                        margin="0 auto"
+
                     >
                         <Animation id="left-col" delay={ 0.4 }>
                             <Image
@@ -47,7 +52,7 @@ function About() {
                                 w={ { base: '350px', md: '400px', lg: '550px' } }
                                 display={ { base: 'none', md: 'block', lg: 'block' } }
                                 objectFit="cover"
-                                src="https://firebasestorage.googleapis.com/v0/b/morning-donuts-d5e7f.appspot.com/o/dough-about.jpg?alt=media&token=a7c8b763-3773-4bac-b411-bb82a95773a2"
+                                src={ heroImg }
                             />
                         </Animation>
 
