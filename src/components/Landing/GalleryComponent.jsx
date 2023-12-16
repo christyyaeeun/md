@@ -12,15 +12,15 @@ import {
     useBreakpointValue,
 } from '@chakra-ui/react';
 import { ChevronDownIcon } from '@chakra-ui/icons';
-import { v4 as uuidv4 } from 'uuid';
-import Cart from '../Order/Cart'
+// import { v4 as uuidv4 } from 'uuid';
+// import Cart from '../Order/Cart'
 import items from '../Order/Items'
 import ProductItem from '../Order/ProductItem';
 
 function Gallery() {
     const [ selectedTag, setSelectedTag ] = useState(null);
-    const [ cartItems, setCartItems ] = useState([]);
-    const [ isCartOpen, setIsCartOpen ] = useState(false);
+    // const [ cartItems, setCartItems ] = useState([]);
+    // const [ isCartOpen, setIsCartOpen ] = useState(false);
 
     const handleTagSelection = (tag) => {
         setSelectedTag((prevTag) => (prevTag === tag ? null : tag));
@@ -28,33 +28,33 @@ function Gallery() {
 
     const isMobile = useBreakpointValue({ base: true, md: false });
 
-    const selectItem = (item) => {
-        // Handle selecting the item
-    };
+    // const selectItem = (item) => {
+    //     // Handle selecting the item
+    // };
 
-    const addToCart = (item) => {
-        const newItem = { ...item, id: uuidv4() };
-        setCartItems((prevItems) => [ ...prevItems, newItem ]);
-        setIsCartOpen(true);
-    };
+    // const addToCart = (item) => {
+    //     const newItem = { ...item, id: uuidv4() };
+    //     setCartItems((prevItems) => [ ...prevItems, newItem ]);
+    //     setIsCartOpen(true);
+    // };
 
-    const toggleCart = () => {
-        setIsCartOpen((prevIsCartOpen) => !prevIsCartOpen);
-    };
+    // const toggleCart = () => {
+    //     setIsCartOpen((prevIsCartOpen) => !prevIsCartOpen);
+    // };
 
-    const removeFromCart = (item) => {
-        setCartItems((prevItems) => prevItems.filter((cartItem) => cartItem.id !== item.id));
-    };
+    // const removeFromCart = (item) => {
+    //     setCartItems((prevItems) => prevItems.filter((cartItem) => cartItem.id !== item.id));
+    // };
 
-    const updateCartItemQuantity = (item, newQuantity) => {
-        const updatedItems = cartItems.map((cartItem) => {
-            if (cartItem.id === item.id) {
-                return { ...cartItem, quantity: newQuantity };
-            }
-            return cartItem;
-        });
-        setCartItems(updatedItems);
-    };
+    // const updateCartItemQuantity = (item, newQuantity) => {
+    //     const updatedItems = cartItems.map((cartItem) => {
+    //         if (cartItem.id === item.id) {
+    //             return { ...cartItem, quantity: newQuantity };
+    //         }
+    //         return cartItem;
+    //     });
+    //     setCartItems(updatedItems);
+    // };
 
     return (
         <>
@@ -118,18 +118,19 @@ function Gallery() {
                         .filter((item) => selectedTag === null || item.tag === selectedTag)
                         .map((item, index) => (
                             <Box key={ index } p={ 2 } w={ { base: '100%', md: '50%', lg: '33.33%' } }>
-                                <ProductItem item={ item } selectItem={ selectItem } addToCart={ addToCart } />
+                                {/* <ProductItem item={ item } selectItem={ selectItem } addToCart={ addToCart } /> */ }
+                                <ProductItem item={ item } />
                             </Box>
                         )) }
                 </Flex>
             </Box>
-            <Cart
+            {/* <Cart
                 isOpen={ isCartOpen }
                 onClose={ toggleCart }
                 cartItems={ cartItems }
-                removeFromCart={ removeFromCart }
-                updateCartItemQuantity={ updateCartItemQuantity }
-            />
+            removeFromCart={ removeFromCart }
+            updateCartItemQuantity={ updateCartItemQuantity }
+            /> */}
         </>
     );
 }

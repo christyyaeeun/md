@@ -17,7 +17,7 @@ const items = [
     {
         id: 1,
         title: 'Mixed Dozen Donuts',
-        imageUrl: 'https://firebasestorage.googleapis.com/v0/b/christypark-portfolio.appspot.com/o/donuts%2Fcard-special.png?alt=media&token=2c24e1bb-04b0-4fdf-aae0-c9adc2de0e54',
+        imageUrl: 'https://firebasestorage.googleapis.com/v0/b/christypark-portfolio.appspot.com/o/donuts%2FdozenMixed.png?alt=media&token=aa2774b4-8d53-49c6-ad94-10cd3e28b94f',
         // imageUrl: img1,
         imageAlt: 'Product shot of boxed assorted donuts',
         tag: 'Donut Box',

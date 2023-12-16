@@ -37,12 +37,13 @@ function Hero({ menuRef }) {
                     <Box className="hero-cover__background" />
                     <Image
                         className="hero-cover__image-bg"
-                        alt=""
+                        alt="Hero Image"
                         src={ imageUrl }
                         width="100%"
                         objectFit="cover"
                         scale={ 0 }
                         zIndex="0"
+                        loading="eager"
                     />
                     <Box
                         className="hero-cover__inner-container is-layout-flow"
