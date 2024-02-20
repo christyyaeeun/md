@@ -51,7 +51,9 @@ function About() {
                                 w={ { base: '350px', md: '400px', lg: '550px' } }
                                 display={ { base: 'none', md: 'block', lg: 'block' } }
                                 objectFit="cover"
-                                src="https://firebasestorage.googleapis.com/v0/b/morning-donuts-d5e7f.appspot.com/o/dough-about.jpg?alt=media&token=a7c8b763-3773-4bac-b411-bb82a95773a2" />
+                                src="https://firebasestorage.googleapis.com/v0/b/morning-donuts-d5e7f.appspot.com/o/dough-about.jpg?alt=media&token=a7c8b763-3773-4bac-b411-bb82a95773a2"
+                                alt='About Image'
+                                loading="lazy" />
                         </Animation>
 
                         <motion.div

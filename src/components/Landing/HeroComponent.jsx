@@ -40,10 +40,11 @@ function Hero({ menuRef }) {
                         alt="Hero Image"
                         src={ imageUrl }
                         width="100%"
+                        height="100%"
                         objectFit="cover"
                         scale={ 0 }
                         zIndex="0"
-                        loading="eager"
+                        loading="lazy"
                     />
                     <Box
                         className="hero-cover__inner-container is-layout-flow"
@@ -52,8 +53,6 @@ function Hero({ menuRef }) {
                         mt={ { base: "-5em" } }
                     >
                         <Container className="hero-columns alignfull" display="flex" maxW="100%">
-                            {/* <Box id="left-col" className="hero-column is-layout-flow" flexBasis="50%" />
-                            <Box id="right-col" className="hero-column is-layout-flow" flexBasis="50%" bg={ { base: "whiteAlpha.200", lg: "transparent" } }> */}
                             <Box id="left-col" className="hero-column is-layout-flow" />
                             <Box id="right-col" className="hero-column is-layout-flow" bg={ { base: "whiteAlpha.200", lg: "transparent" } }>
                                 <Container maxW={ '5xl' }>

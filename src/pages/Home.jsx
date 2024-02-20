@@ -4,6 +4,7 @@ import { FaArrowUp } from 'react-icons/fa';
 import { AboutComponent, ContactComponent, MenuComponent, GalleryComponent, HeroComponent } from '../components/Landing';
 import Navbar from '../components/Layout/Navbar';
 import { Box } from '@chakra-ui/react';
+import Footer from '../components/Layout/Footer.tsx';
 
 function Home() {
     const [ showScrollToTop, setShowScrollToTop ] = useState(false);
@@ -11,7 +12,7 @@ function Home() {
     const heroRef = useRef();
     const aboutRef = useRef();
     const galleryRef = useRef();
-    const contactRef = useRef();
+    // const contactRef = useRef();
     const menuRef = useRef();
 
     const scrollToSection = (sectionRef) => {
@@ -34,8 +35,8 @@ function Home() {
             scrollToSection(aboutRef);
         } else if (section === 'gallery') {
             scrollToSection(galleryRef);
-        } else if (section === 'contact') {
-            scrollToSection(contactRef);
+            // } else if (section === 'contact') {
+            //     scrollToSection(contactRef);
         } else if (section === 'menu') {
             scrollToSection(menuRef);
         }
@@ -62,7 +63,7 @@ function Home() {
                 <GalleryComponent />
                 <div ref={ menuRef } className="menu-container section" id="menu-container" />
                 <MenuComponent />
-
+                {/*
                 <motion.div
                     transition={ { duration: 1, delay: 0.3 } }
                     initial={ { opacity: 0, y: 50 } }
@@ -71,7 +72,9 @@ function Home() {
                 >
                     <div ref={ contactRef } className="contact-container section" id="contact-container" />
                     <ContactComponent />
-                </motion.div>
+                </motion.div> */}
+                <Footer />
+
             </Box>
         </>
     );
