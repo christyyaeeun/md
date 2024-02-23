@@ -29,6 +29,7 @@ export default function Navbar({ onScrollToSection }) {
         setActiveButton(section);
     };
 
+
     const handleOrderOnlineClick = () => {
         // Send event to Google Analytics
         window.gtag('event', 'order_online_click', {

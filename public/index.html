@@ -42,11 +42,48 @@
   <title>Morning Donuts</title>
 </head>
 
+
 <body>
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5ZRHG29" height="0" width="0"
       style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
+  <img src="https://www.google-analytics.com/mp/collect" style="display:none;" onload="sendEventToGoogleAnalytics()"
+    onerror="sendEventToGoogleAnalytics()" />
+
+  <script>
+    function sendEventToGoogleAnalytics() {
+      // Event data
+      const eventData = {
+        'measurement_id': 'G-XVJM6F3G56',  // Replace with your Measurement ID
+        'api_secret': 'vpTA6-xfT6egvPxAaYKtfQ',  // Replace with your API secret
+        't': 'event',
+        'ec': 'category',   // Example category
+        'ea': 'action',     // Example action
+        'el': 'label',      // Example label
+        'ev': 'value'       // Example value
+      };
+
+      // Convert event data to URL-encoded format
+      const params = new URLSearchParams(eventData);
+
+      // Send POST request to Measurement Protocol endpoint
+      fetch('https://www.google-analytics.com/collect', {
+        method: 'POST',
+        body: params,
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded'
+        }
+      })
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Network response was not ok');
+          }
+        })
+        .catch(error => console.error('Error:', error));
+    }
+
+  </script>
   <!-- JavaScript Warning for NoScript Users -->
   <noscript>You need to enable JavaScript to run this app.</noscript>
 
