@@ -63,7 +63,7 @@ function Hero({ menuRef }) {
                                         spacing={ { base: 8, md: 10 } }
                                         px={ { lg: 10 } }
                                         py={ { base: 20, lg: 28 } }>
-                                        <Heading
+                                        <Heading as='h1' size='4xl'
                                             id="cta-text"
                                             color="black"
                                             fontWeight={ 600 }
